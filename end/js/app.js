@@ -96,7 +96,7 @@ function selectPokemonFromList(event) {
     event.target.className += ' active';
 
     // Display the data for the current Pokémon
-    DisplayPokémonData(pokedex.find(pokemon => pokemon.number === number));
+    displayPokémonData(pokedex.find(pokemon => pokemon.number === number));
 }
 
 /**
@@ -104,7 +104,7 @@ function selectPokemonFromList(event) {
  *
  * @param {{name, number, description, category, imageurl, length, weight, abilities, typing}} pokemon the pokemon object to display.
  */
-function DisplayPokémonData(pokemon) {
+function displayPokémonData(pokemon) {
     // Display all the data on the DOM of the provided Pokémon
     document.getElementById('name-and-number').innerHTML = getPokemonNumberAndName(pokemon);
     document.getElementById('description').innerHTML = pokemon.description;
